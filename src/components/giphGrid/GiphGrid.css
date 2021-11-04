@@ -1,0 +1,18 @@
+.GiphGrid {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgrey;
+    margin: 0px;
+    justify-content: center;
+}
+
+.Gif {
+    width: 30%;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.GiphGrid.dark {
+    background-color: black;
+}

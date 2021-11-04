@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Button from "../button/Button";
 import { request } from "../../utils/request";
 import './SearchBar.css';
+import ilustra_header from "../../assets/ilustra_header.svg"
 
 function SearchBar({ onClick, value, setValue, btnDisabled }) {
   const [autocomplete, setAutocomplete] = useState([]);
@@ -17,7 +18,8 @@ function SearchBar({ onClick, value, setValue, btnDisabled }) {
 
 return (
     <div className="SearchBar">
-      <section>
+      <section className='SearchBar'>
+        <img src={ilustra_header} alt="ilustracion saludo" />
       <form>
         <input
           list="browsers"

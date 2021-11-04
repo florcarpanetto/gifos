@@ -1,11 +1,28 @@
 .App {
   text-align: center;
-  width: 100vw;
+  width: 100%;
+  display: flexbox;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+ 
 
 }
 .App.light { background-color: antiquewhite; }
 
 .App.dark {
-  background-color: black;
+  background-color: rgb(18, 31, 31);
   color: white;
+}
+
+section {
+  margin: 0px;
+}
+
+.Header {
+  align-self: center;
+}
+
+.SearchBar {
+  align-self: center;
 }

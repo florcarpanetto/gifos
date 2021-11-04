@@ -4,7 +4,7 @@ function Gif({
     link
 }) {
     return (
-        <div>
+        <div className='Gif'>
             <a href={link} target="_blank">
                 <img src={src} />
             </a>

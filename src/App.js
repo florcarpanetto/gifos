@@ -47,8 +47,8 @@ function App() {
   return (
     
       <div className={`App ${isDark ? 'dark' : 'light'}`}>
-        <Header/>
-        <SearchBar onClick={() => setIsSearching(!isSearching)}
+        <Header className='Header'/>
+        <SearchBar className='SearchBar' onClick={() => setIsSearching(!isSearching)}
         value={value}
         setValue={setValue}
         btnDisabled={isSearching || value === ""}/>
