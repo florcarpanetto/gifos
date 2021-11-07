@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     background-color: lightgrey;
+    padding: 2%;
     margin: 0px;
     justify-content: center;
 }

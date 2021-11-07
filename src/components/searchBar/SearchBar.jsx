@@ -1,12 +1,16 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Button from "../button/Button";
 import { request } from "../../utils/request";
 import './SearchBar.css';
 import ilustra_header from "../../assets/ilustra_header.svg"
+import icon_search from "../../assets/icon-search-mod-noc.svg"
+import { IsDarkContext } from "../../contexts/IsDarkContext";
 
 function SearchBar({ onClick, value, setValue, btnDisabled }) {
   const [autocomplete, setAutocomplete] = useState([]);
+  const {isDark} = useContext(IsDarkContext);
+
   useEffect(() => {
     if (value !== "") {
       request("/search/tags", value, 5)
@@ -27,8 +31,9 @@ return (
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <Button message='BUSCAR' onClick={onClick} className="btn-search" disabled={btnDisabled}>
         
+        <Button  onClick={onClick} className={`btn search bar ${isDark ? 'dark' : 'light'}`} disabled={btnDisabled}>
+          <img src={icon_search}/>
         </Button>
         <datalist id="browsers">
           {(autocomplete || []).map((item) => {

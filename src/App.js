@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     if (isSearching && value !== "") {
-      setIsLoading(true);
+      setIsLoading(true)
       request("/search", value)
       .then((res) => res.json())
       .then((data) => setGifsList(data.data))
